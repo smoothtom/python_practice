@@ -7,7 +7,7 @@ def character_input():
     age = int(input("Please Enter your age: "))
     year = (2020-age)+100
     print(name, "will be 100 in year", year)
-character_input()
+# character_input()
 
 def odd_or_even():
     num = int(input("Please Enter a number to check: "))
