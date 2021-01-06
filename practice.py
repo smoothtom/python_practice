@@ -27,5 +27,10 @@ def odd_or_even():
 
 def list_less_than_ten():
     a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-
-# list_less_than_ten()
+    
+    new_list = a
+    for x in list(new_list):     # prints all the elements less than 5 from list[a]
+      if x <= 5:
+        new_list.remove(x)
+    print(new_list)
+list_less_than_ten()
