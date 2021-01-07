@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-import random
-
 # Practice Python - Beginner Python exercises 
 
 def character_input():
