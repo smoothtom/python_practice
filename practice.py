@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import random
+
 # Practice Python - Beginner Python exercises 
 
 def character_input():
@@ -29,8 +31,33 @@ def list_less_than_ten():
     a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
     
     new_list = a
-    for x in list(new_list):     # prints all the elements less than 5 from list[a]
+    # prints all the elements less than five 
+    for x in list(new_list):     
       if x <= 5:
         new_list.remove(x)
     print(new_list)
-list_less_than_ten()
+# list_less_than_ten()
+
+def divisors():
+   number = int(input("Enter a number: "))
+   for i in range(1, number+1):
+    if (number % i) == 0:
+      print(i)
+# divisors()
+
+def list_overlap():
+    a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+    b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    new_list = list(dict.fromkeys(a,b)) # removes all the duplicates from two list above 
+    print(new_list)
+# list_overlap()
+
+def string_lists():
+  palindrome = str(input("Please Enter a number to check if its a Polindrome: "))
+  palindrome = palindrome.casefold()
+  reverse = reversed(palindrome)
+  if list(palindrome) == list(reverse): # Checks if string is a palindrome
+    print("This string is a palindrome")
+  else:
+    print("This string is not a palindrome")
+string_lists()
