@@ -110,13 +110,23 @@ def guessing_game_one():
 # guessing_game_one()
 
 def list_overlap_comprehensions():
-    a = random.sample([1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89], 6)
+    a = random.sample([1, 1, 2, 3, 5, 8, 13, 21, 55, 89], 6)
     b = random.sample([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 6)
     new_list = set(a+b)
     print(list(new_list))
-list_overlap_comprehensions()
+# list_overlap_comprehensions()
 
 def check_primality_functions():
-  
+  user = int(input("Please enter a number to check, if its primality: "))
+  if user > 1:
+    for i in range(2,user):
+      if (user % i) == 0:
+        print("this is a prime number")
+        break
+    else:
+      print("this isn't a prime number")
+check_primality_functions()
+
+
 
 
