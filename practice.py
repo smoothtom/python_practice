@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import random
+
 # Practice Python - Beginner Python exercises 
 
 def character_input():
@@ -58,4 +60,54 @@ def string_lists():
     print("This string is a palindrome")
   else:
     print("This string is not a palindrome")
-string_lists()
+# string_lists()
+
+def list_comprehensions():
+  a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+  print([i for i in a if i % 2 == 0]) # makes a new list, that contains only the even elements of this list
+  """ for i in a: 
+        if i % 2 == 0:
+          print(i)"""
+# list_comprehensions()
+
+def rock_paper_scissors():
+  user_one = input("Please choose between [Rock] [Paper] [Scissors] : ")
+  user_two = input("Please choose between [Rock] [Paper] [Scissors] : ")
+  if user_one == user_two:
+    print("It's a tie")
+  elif user_one == "Rock":
+    if user_two == "Scissors":
+      print("User one win")
+    else:
+      print("User two win")
+  elif user_one == "Scissors":
+    if user_two == "Paper":
+      print("User one win")
+    else:
+      print("User two win")
+  elif user_one == "Paper":
+    if user_two == "Rock":
+      print("User one win")
+    else:
+      print("User two win")
+  else:
+    print("Please try again!") # If it's not working lol
+# rock_paper_scissors()
+    
+def guessing_game_one():
+  a = random.randint(1,9)
+  tries = 0 
+  while 1:
+    user = int(input("Guess the number: "))
+    tries += 1 # start counting the tries, you'll need to guess the number
+    if user < a:
+      print("to low")
+    elif user > a:
+      print("to high")
+    elif user == a:
+      print("congrats, you guessed the number", a, "with", tries, "tries")
+      break 
+# guessing_game_one()
+
+def list_overlap_comprehensions():
+
