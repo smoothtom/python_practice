@@ -127,3 +127,14 @@ def check_primality_functions():
       print("this is a prime number")
 # check_primality_functions()
 
+def list_ends():
+  a = [5, 10, 15, 20, 25]
+  print(a)  # print the original list
+  first_element = a[0]
+  last_element = a[-1]
+  print("the first element is " + str(first_element) + ", and the last element is " + str(last_element))  
+  # print only the first and last element of this list 
+list_ends()
+
+
+
