@@ -10,5 +10,3 @@
 # Build With 
   * Python 3 :-)
   
-# Authors 
-  * Tom Lauth 
