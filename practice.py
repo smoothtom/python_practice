@@ -117,7 +117,7 @@ def list_overlap_comprehensions():
 # list_overlap_comprehensions()
 
 def check_primality_functions():
-  user = int(input("Please enter a number to check, if its primality: "))
+  user = int(input("Please enter a number to check, if its a prime number: "))
   if user > 1:
     for i in range(2,user):
       if (user % i) == 0:
@@ -125,5 +125,5 @@ def check_primality_functions():
         break
     else:
       print("this is a prime number")
-check_primality_functions()
+# check_primality_functions()
 
