@@ -155,7 +155,11 @@ def list_remove_duplicates():
   print(list(new_items), "- this is the list without any duplicates")
 # list_remove_duplicates()
 
-
+def reverse_word_oder():
+  user = str(input("Please Enter something: "))
+  words = user.split(' ')
+  reverse = ' '.join(reversed(words))
+reverse_word_oder()
 
 
 
