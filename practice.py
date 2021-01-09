@@ -137,7 +137,7 @@ def list_ends():
 # list_ends()
 
 def fibanocci():
-  user = int(input("Please Enter how manyfibanocci numbers you want to generate: "))
+  user = int(input("Please Enter how many fibanocci numbers you want to generate: "))
   n1, n2 = 0, 1 # first two terms 
   count = 0
   while count < user:
@@ -157,9 +157,10 @@ def list_remove_duplicates():
 
 def reverse_word_oder():
   user = str(input("Please Enter something: "))
-  words = user.split(' ')
-  reverse = ' '.join(reversed(words))
+  new = user.split()
+  new.reverse()
+  result = " ".join(new)
+  print(result)
 reverse_word_oder()
 
-
-
+def password_generator():
