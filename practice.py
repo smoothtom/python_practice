@@ -105,7 +105,7 @@ def guessing_game_one():
     elif user > a:
       print("to high")
     elif user == a:
-      print("congrats, you guessed the number", a, "with", tries, "tries")
+      print("congrats, you guessed the number", a, "in", tries, "tries")
       break 
 # guessing_game_one()
 
@@ -134,7 +134,28 @@ def list_ends():
   last_element = a[-1]
   print("the first element is " + str(first_element) + ", and the last element is " + str(last_element))  
   # print only the first and last element of this list 
-list_ends()
+# list_ends()
+
+def fibanocci():
+  user = int(input("Please Enter how manyfibanocci numbers you want to generate: "))
+  n1, n2 = 0, 1 # first two terms 
+  count = 0
+  while count < user:
+    print(n1)
+    count += 1
+    new = n1 + n2
+    n1 = n2
+    n2 = new
+# fibanocci()  
+
+def list_remove_duplicates():
+  items = [1, 1, 2, 3, 5, 8, 13, 21, 55, 89]
+  print(items, "- this is the original list")
+  new_items = set(items)  # removes all the duplicates
+  print(list(new_items), "- this is the list without any duplicates")
+# list_remove_duplicates()
+
+
 
 
 
