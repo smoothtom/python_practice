@@ -182,9 +182,12 @@ def decode_webpage():
   title = soup.find_all("h3") # searches the webpage for all h3 elements 
   for news in title:
     articles.append(news.text)
-  del articles[-3:] # removes the last 3 elements from the list, becaus ethey aren't headers lol
+  del articles[-3:] # removes the last 3 elements from the list, because they aren't headers lol
   for x in articles:
     print(x,"\n")
 decode_webpage()
 
+def cows_and_bulls():
+    count = 0 
 
+cows_and_bulls()
