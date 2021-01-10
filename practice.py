@@ -177,11 +177,14 @@ from bs4 import BeautifulSoup
 # print out a list of all the article title 
 def decode_webpage():
   url = "https://www.nytimes.com/"
-  article_title = []
+  articles = []
   r = requests.get(url)
-  soup = BeautifulSoup(r.text, "html5lib")
-  titles = soup.find_all(class_="story-wrapper")
-  print(titles[1].get_text())
+  soup = BeautifulSoup(r.text,'html.parser')
+  title = soup.findAll('h2', {'class': 'css-1vvhd4r e1voiwgp0'})
+  for new in title:
+    articles.append(new.text)
+    print(articles)
+
 decode_webpage()
 
 
