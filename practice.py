@@ -161,6 +161,27 @@ def reverse_word_oder():
   new.reverse()
   result = " ".join(new)
   print(result)
-reverse_word_oder()
+# reverse_word_oder()
 
+import os
+import string 
 def password_generator():
+  number = int(input("Please Enter how long your password should be: "))
+  chars = string.ascii_letters + string.digits + "!@#$%^&*()"
+  random.seed = (os.urandom(1024))
+  print(''.join(random.choice(chars) for i in range(number)))
+# password_generator()
+
+import requests
+from bs4 import BeautifulSoup
+# print out a list of all the article title 
+def decode_webpage():
+  url = "https://www.nytimes.com/"
+  article_title = []
+  r = requests.get(url)
+  soup = BeautifulSoup(r.text, "html5lib")
+  titles = soup.find_all(class_="story-wrapper")
+  print(titles[1].get_text())
+decode_webpage()
+
+
