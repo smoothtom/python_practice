@@ -174,17 +174,17 @@ def password_generator():
 
 import requests
 from bs4 import BeautifulSoup
-# print out a list of all the article title 
 def decode_webpage():
-  url = "https://www.nytimes.com/"
+  url = "https://www.nytimes.com"
   articles = []
   r = requests.get(url)
-  soup = BeautifulSoup(r.text,'html.parser')
-  title = soup.findAll('h2', {'class': 'css-1vvhd4r e1voiwgp0'})
-  for new in title:
-    articles.append(new.text)
-    print(articles)
-
+  soup = BeautifulSoup(r.text,"lxml")
+  title = soup.find_all("h3") # searches the webpage for all h3 elements 
+  for news in title:
+    articles.append(news.text)
+  del articles[-3:] # removes the last 3 elements from the list, becaus ethey aren't headers lol
+  for x in articles:
+    print(x,"\n")
 decode_webpage()
 
 
