@@ -208,6 +208,15 @@ def cows_and_bulls():
                 elif listnum[x] in number:
                     bull += 1
         print("Cows: ", cow, "Bulls: ", bull)
-cows_and_bulls()
+# cows_and_bulls()
 
+def decode_webpage_two():
+    url = "https://www.vanityfair.com/style/society/2014/06/monica-lewinsky-humiliation-culture"
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, "lxml")
+    item = soup.find_all("div", class_="grid--item body body__container article__body grid-layout__content") # findAll = find_all 
+    for x in item:
+        print(x.text)
+# decode_webpage_two()
 
+def element_search():
