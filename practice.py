@@ -185,9 +185,29 @@ def decode_webpage():
   del articles[-3:] # removes the last 3 elements from the list, because they aren't headers lol
   for x in articles:
     print(x,"\n")
-decode_webpage()
+# decode_webpage()
 
 def cows_and_bulls():
     count = 0 
+    number = [random.randint(0,9) for n in range(4)]
+    print(number)
+    user = input("Please guess the 4 digit number: ")
+    listnum  = list(map(int, user))
+    while True:
+        count += 1 
+        if listnum == number:
+            print("Well done, you won!, it took you only", str(count), "tries")
+            break
+        else:
+            cow = 0 
+            bull = 0
 
+            for x in range(0,4):
+                if listnum[x] == number[x]:
+                    cow += 1 
+                elif listnum[x] in number:
+                    bull += 1
+        print("Cows: ", cow, "Bulls: ", bull)
 cows_and_bulls()
+
+
