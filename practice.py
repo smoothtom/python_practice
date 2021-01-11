@@ -189,10 +189,10 @@ def decode_webpage():
 
 def cows_and_bulls():
     count = 0 
-    number = [random.randint(0,9) for n in range(4)]
+    number = [random.randint(0,9) for n in range(4)] # generate a random 4 digit number
     print(number)
     user = input("Please guess the 4 digit number: ")
-    listnum  = list(map(int, user))
+    listnum  = list(map(int, user)) # converts the user input into a list
     while True:
         count += 1 
         if listnum == number:
