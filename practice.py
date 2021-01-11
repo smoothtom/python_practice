@@ -228,8 +228,11 @@ def element_search():
         print(False)
 # element_search()
 
+from datetime import datetime
 def write_to_a_file():
   url = "https://www.nytimes.com"
+  now = datetime.now()
+  time = now.strftime("%d.%m.%Y")   # 'Extra' - added the current date 
   articles = []
   r = requests.get(url)
   soup = BeautifulSoup(r.text,"lxml")
@@ -237,7 +240,10 @@ def write_to_a_file():
   for news in title:
     articles.append(news.text)
   del articles[-3:] 
-  with open("articles.txt", "w") as f: 
+  with open("articles.txt", "w") as f:  # writes the title of the articles in a .txt file
+    f.write("\n" + time + "\n")
     for x in articles:
         f.write(x + "\n")
-write_to_a_file()
+# write_to_a_file()
+
+def read_from_file():
