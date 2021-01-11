@@ -187,7 +187,7 @@ def decode_webpage():
     print(x,"\n")
 # decode_webpage()
 
-def cows_and_bulls():
+def cows_and_bulls(): # TODO still need to fix this 
     count = 0 
     number = [random.randint(0,9) for n in range(4)] # generate a random 4 digit number
     print(number)
@@ -202,7 +202,7 @@ def cows_and_bulls():
             cow = 0 
             bull = 0
 
-            for x in range(0,4):
+            for x in range(0,4): # won't work right
                 if listnum[x] == number[x]:
                     cow += 1 
                 elif listnum[x] in number:
@@ -220,3 +220,24 @@ def decode_webpage_two():
 # decode_webpage_two()
 
 def element_search():
+    myList = [1, 3, 5, 30, 42, 43, 500]
+    user = int(input("Please Enter a number: "))
+    if user in myList:
+        print(True)
+    else: 
+        print(False)
+# element_search()
+
+def write_to_a_file():
+  url = "https://www.nytimes.com"
+  articles = []
+  r = requests.get(url)
+  soup = BeautifulSoup(r.text,"lxml")
+  title = soup.find_all("h3") 
+  for news in title:
+    articles.append(news.text)
+  del articles[-3:] 
+  with open("articles.txt", "w") as f: 
+    for x in articles:
+        f.write(x + "\n")
+write_to_a_file()
