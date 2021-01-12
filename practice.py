@@ -256,6 +256,17 @@ def read_from_file():
                 namescount[names] += 1 
         for k,v in namescount.items():  
             print(k,v)
-read_from_file()
+# read_from_file()
 
-
+def file_overlap():
+    overlaps = []
+    pfile = open("primenumbers.txt", "r")
+    nfile = open("numbers.txt", "r")
+    x = pfile.read().split()
+    y = nfile.read().split()
+    for numbers in x:
+        if numbers in y:
+            overlaps.append(numbers)
+    for k in overlaps:
+        print(k)
+file_overlap()
