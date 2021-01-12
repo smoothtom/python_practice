@@ -247,3 +247,15 @@ def write_to_a_file():
 # write_to_a_file()
 
 def read_from_file():
+    namescount = {}
+    with open("nameslist.txt", "r") as f:
+        for names in f.read().split():  # counts the names how often they come
+            if names not in namescount:
+                namescount[names] = 1
+            else:
+                namescount[names] += 1 
+        for k,v in namescount.items():  
+            print(k,v)
+read_from_file()
+
+
