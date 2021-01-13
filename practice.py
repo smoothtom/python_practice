@@ -269,4 +269,13 @@ def file_overlap():
             overlaps.append(numbers)
     for k in overlaps:
         print(k)
-file_overlap()
+# file_overlap()
+
+def draw_a_game_board():
+    height = int(input("Please Enter the height of the board: "))
+    width = int(input("Please Enter the width of the board: "))
+    for x in range(height):
+        print(" --- " * width)
+        print("|   |" * width)
+    print(" --- " * width)
+# draw_a_game_board()
