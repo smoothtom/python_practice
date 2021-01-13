@@ -279,3 +279,22 @@ def draw_a_game_board():
         print("|   |" * width)
     print(" --- " * width)
 # draw_a_game_board()
+
+import time
+def guessing_game_two():
+    count = 0
+    guess = random.randint(1,100)
+    number = int(input("Please Enter a number for the Computer to guess: "))
+    while guess != number:
+        if guess > number:
+            count += 1
+            guess -= 1 
+            guess = random.randint(1, guess)
+        else:
+            count += 1 
+            guess += 1 
+            guess = random.randint(guess, 100)
+        print("\n"+"The Computer takes a guess...", guess)
+        time.sleep(0.08)
+    print("\n"+"The Computer guessed", guess, "and it was correct", "it took only", count, "tries")
+# guessing_game_two()
