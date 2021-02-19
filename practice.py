@@ -284,7 +284,7 @@ import time
 def guessing_game_two():
     count = 0
     guess = random.randint(1,100)
-    number = int(input("Please Enter a number for the Computer to guess: "))
+    number = int(input("Please Enter a number between 1 and 100 for the Computer to guess: "))
     while guess != number:
         if guess > number:
             count += 1
